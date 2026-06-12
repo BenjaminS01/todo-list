@@ -1,0 +1,34 @@
+# ===========================
+# Backend — Java / Maven
+# ===========================
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+backend/*.iml
+*.class
+*.jar
+*.war
+*.ear
+
+# ===========================
+# Frontend — Angular / Node
+# ===========================
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/cache/
+frontend/*.js.map
+
+# ===========================
+# IDE
+# ===========================
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.DS_Store
+
+# ===========================
+# Umgebung
+# ===========================
+.env
+.env.local
