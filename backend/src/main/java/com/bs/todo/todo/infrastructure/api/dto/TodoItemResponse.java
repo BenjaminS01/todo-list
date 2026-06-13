@@ -6,11 +6,17 @@ import java.time.LocalDate;
 import java.util.UUID;
 
 public class TodoItemResponse  {
-    private UUID id;
-    private String description;
+    private final UUID id;
+    private final String description;
 
     @JsonFormat(pattern = "dd.MM.yyyy")
-    private LocalDate completionDate;
+    private final LocalDate completionDate;
+
+    public TodoItemResponse(UUID id, String description, LocalDate completionDate) {
+        this.id = id;
+        this.description = description;
+        this.completionDate = completionDate;
+    }
 
     public UUID getId() {
         return id;
