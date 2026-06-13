@@ -39,19 +39,4 @@ class TodoItemTest {
         // Then
         Assertions.assertEquals(3, ids.size());
     }
-
-//    @Test
-//    public void shouldThrowForInvalidDateFormat() {
-//
-//    }
-//
-//    @Test
-//    public void shouldThrowForBlankDescription() {
-//
-//    }
-//
-//    @Test
-//    public void shouldThrowForOversizeDescription() {
-//
-//    }
 }
