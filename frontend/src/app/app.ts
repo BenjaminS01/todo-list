@@ -1,8 +1,9 @@
 import { Component, signal } from '@angular/core';
+import { TodoListComponent } from "./features/todo-list/todo-list";
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [TodoListComponent],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
