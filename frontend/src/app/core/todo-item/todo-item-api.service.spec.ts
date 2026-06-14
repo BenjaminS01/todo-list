@@ -4,6 +4,7 @@ import { TodoItemApiService } from './todo-item-api.service';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TodoItem } from './todo-item.model';
 import { provideHttpClient } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 describe('TodoItemApi', () => {
   let service: TodoItemApiService;
@@ -28,7 +29,7 @@ describe('TodoItemApi', () => {
     let result: TodoItem[] | undefined;
     service.getAll().subscribe(items => result = items);
 
-    const req = httpTesting.expectOne('/api/todos');
+    const req = httpTesting.expectOne(`${environment.apiUrl}/todos`);
     expect(req.request.method).toBe('GET');
     req.flush([{ id: '1', description: '50 Liegestütze', completionDate: '20.06.2026' }]);
 
@@ -39,7 +40,7 @@ describe('TodoItemApi', () => {
   it('should send DELETE request with correct id', () => {
     service.delete('1').subscribe();
 
-    const req = httpTesting.expectOne('/api/todos/1');
+    const req = httpTesting.expectOne(`${environment.apiUrl}/todos/1`);
     expect(req.request.method).toBe('DELETE');
     req.flush(null);
   });
