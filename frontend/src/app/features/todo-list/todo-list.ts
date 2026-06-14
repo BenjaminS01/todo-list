@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { TodoItemComponent } from "./todo-item/todo-item";
 import { TodoItemApiService } from '../../core/todo-item/todo-item-api.service';
 import { TodoItem } from '../../core/todo-item/todo-item.model';
+import { APP_CONSTANTS } from '../../core/constants';
 
 @Component({
   selector: 'app-todo-list',
@@ -10,6 +11,7 @@ import { TodoItem } from '../../core/todo-item/todo-item.model';
   styleUrl: './todo-list.scss',
 })
 export class TodoListComponent {
+  protected readonly constants = APP_CONSTANTS;
   private readonly service = inject(TodoItemApiService)
   items = signal<TodoItem[]>([])
 

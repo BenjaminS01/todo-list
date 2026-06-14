@@ -2,13 +2,14 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Service } from '@angular/core';
 import { map, Observable } from 'rxjs';
 import { TodoItem } from './todo-item.model';
+import { environment } from '../../../environments/environment';
 
 
 @Service()
 export class TodoItemApiService {
     private readonly http = inject(HttpClient);
 
-    private readonly apiUrl = '/api/todos';
+    private readonly apiUrl = `${environment.apiUrl}/todos`;
 
     getAll(): Observable<TodoItem[]> {
         return this.http.get<any[]>(this.apiUrl).pipe(

@@ -1,7 +1,7 @@
-<h1>TODO Liste</h1>
+<h1>{{ constants.title }}</h1>
 
 @if (items().length === 0) {
-  <p>Keine Einträge vorhanden</p>
+   <p>{{ constants.emptyMessage }}</p>
 }
 
 @for (item of items(); track item.id) {
