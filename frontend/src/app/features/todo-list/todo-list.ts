@@ -18,7 +18,6 @@ export class TodoListComponent {
   ngOnInit(): void {
     this.service.getAll().subscribe(items => this.items.set(items))
   }
-  //was bei create über api?
 
   onDelete(idParam: string): void {
     this.service.delete(idParam).subscribe(
