@@ -1,1 +1,11 @@
-<p>todo-list works!</p>
+<h1>TODO Liste</h1>
+
+@if (items().length === 0) {
+  <p>Keine Einträge vorhanden</p>
+}
+
+@for (item of items(); track item.id) {
+  <app-todo-item
+    [item]="item" (delete)="onDelete(item.id)">
+  </app-todo-item>
+}
