@@ -40,7 +40,7 @@ describe('TodoItem', () => {
     let emittedId: string | undefined;
     component.delete.subscribe((id: string) => emittedId = id);
 
-    fixture.nativeElement.querySelector('button').click();
+    fixture.nativeElement.querySelector('mat-card').click();
 
     expect(emittedId).toBe('1');
   });
