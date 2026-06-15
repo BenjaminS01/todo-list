@@ -30,7 +30,7 @@ public class TodoApplication {
 			service.create("LLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod " +
 					"tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam " +
 					"et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata",
-					LocalDate.of(2026, 7, 10)
+					LocalDate.of(2026, 6, 21)
 			);
 		};
 	}

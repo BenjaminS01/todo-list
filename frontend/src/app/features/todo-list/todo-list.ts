@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { TodoItemComponent } from "./todo-item/todo-item";
 import { TodoItemApiService } from '../../core/todo-item/todo-item-api.service';
 import { TodoItem } from '../../core/todo-item/todo-item.model';
@@ -25,4 +25,10 @@ export class TodoListComponent {
         items => items.filter(item => item.id !== idParam)
     ))
   }
+
+  sortedItems = computed(() =>
+    [...this.items()].sort(
+      (a, b) => a.completionDate.getTime() - b.completionDate.getTime()
+    )
+  );
 }
