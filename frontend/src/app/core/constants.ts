@@ -1,5 +1,5 @@
 export const APP_CONSTANTS = {
-  title: 'TODO Liste',
+  title: 'TODO-Liste',
   emptyMessage: 'Keine Einträge vorhanden',
   completionDateLabel: 'Erledigungsdatum'
 };
