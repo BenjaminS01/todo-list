@@ -1,0 +1,54 @@
+Epic TODO-Liste
+
+REST-Service mit Angular-Frontend zur Verwaltung von TODO-Einträgen
+
+Technologien: Java / Spring Boot, Angular, SCSS, Shell
+
+
+T1 GitHub Repo und CI
+
+- GitHub Repository todo-list erstellen
+- Projektstruktur mit backend und frontend anlegen
+- CI Pipeline läuft bei Push auf alle Branches und Pull Requests
+- Backend Job: mvn clean verify
+- Frontend Job: Tests + Produktiv-Build
+- .gitignore für Java und Angular konfiguriert
+
+
+US1 REST Service
+Als API-Nutzer möchte ich REST-Endpoints verwenden um TODO-Einträge zu erstellen, abzurufen und zu löschen damit ich meine Aufgaben über einen Rest-client verwalten kann.
+
+AC:
+- Einträge enthalten eine Beschreibung und ein Erledigungsdatum (Format DD.MM.YYYY)
+- Daten werden zur Laufzeit im Arbeitsspeicher gehalten
+- Tests für jede Klasse vorhanden
+
+Subtasks:
+- Spring Boot Projekt aufsetzen
+- Domäne implementieren
+- Service implementieren
+- REST Endpoints implementieren
+- Tests schreiben
+
+
+US2 Benutzeroberfläche
+Als Nutzer möchte ich alle TODO-Einträge auf einer Webseite sehen und einzelne durch Anklicken löschen können damit ich meine offenen Aufgaben im Überblick behalte.
+
+AC:
+- Einträge werden als Liste mit Beschreibung und Erledigungsdatum (DD.MM.YYYY) angezeigt
+- Einträge können durch Anklicken gelöscht werden
+- Kommunikation zwischen Webseite und Service erfolgt via JavaScript
+- Styling mit CSS oder SASS
+- Unit Tests für alle TypeScript-Klassen vorhanden
+
+Subtasks:
+- Angular Projekt aufsetzen
+- Komponenten und HTTP Service implementieren
+- Styling
+
+
+T2 Build und Deployment Skript
+
+- Shell-Skript baut die Anwendung im Produktiv-Modus
+- Frontend wird über Spring Boot auf einem lokalen Port ausgeliefert
+- Port konfigurierbar über Umgebungsvariable PORT (Standard 8080)

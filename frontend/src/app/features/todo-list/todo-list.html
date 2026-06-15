@@ -1,11 +1,9 @@
 <h1>{{ constants.title }}</h1>
 
-@if (items().length === 0) {
-   <p>{{ constants.emptyMessage }}</p>
+@if (sortedItems().length === 0) {
+  <p>{{ constants.emptyMessage }}</p>
 }
-
-@for (item of items(); track item.id) {
-  <app-todo-item
-    [item]="item" (delete)="onDelete(item.id)">
+@for (item of sortedItems(); track item.id) {
+  <app-todo-item [item]="item" (delete)="onDelete(item.id)">
   </app-todo-item>
 }
