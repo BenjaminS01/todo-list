@@ -20,15 +20,18 @@ public class TodoApplication {
 		return args -> {
 			service.create("Öl wechsel", LocalDate.of(2026, 6, 20));
 			service.create("Rasen mähen", LocalDate.of(2026, 6, 25));
+			service.create("LLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod " +
+							"tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam " +
+							"et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata",
+					LocalDate.of(2026, 7, 10)
+			);
 			service.create("Einkaufen", LocalDate.of(2026, 6, 15));
 			service.create("10 Liegestütze", LocalDate.of(2026, 7, 1));
-			service.create("Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod " +
-					"tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam" +
-					" et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem " +
-					"ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy " +
-					"eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et " +
-					"accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est " +
-					"Lorem ipsum dolor sit amet.", LocalDate.of(2026, 7, 10));
+			service.create("LLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod " +
+					"tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam " +
+					"et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata",
+					LocalDate.of(2026, 6, 21)
+			);
 		};
 	}
 }

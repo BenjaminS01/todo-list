@@ -46,6 +46,19 @@ describe('TodoList', () => {
     expect(fixture.nativeElement.textContent).toContain('Keine Einträge vorhanden');
   });
 
+  it('should sort items by completionDate ascending', () => {
+  const unsortedItems: TodoItem[] = [
+    { id: '2', description: 'Später', completionDate: new Date(2026, 6, 10) },
+    { id: '1', description: 'Früher', completionDate: new Date(2026, 5, 1) }
+  ];
+  serviceMock.getAll.mockReturnValue(of(unsortedItems));
+  component.ngOnInit();
+
+  const sorted = component.sortedItems();
+  expect(sorted[0].id).toBe('1');
+  expect(sorted[1].id).toBe('2');
+});
+
   it('should remove item from list after delete', () => {
     component.onDelete('1');
     fixture.detectChanges();

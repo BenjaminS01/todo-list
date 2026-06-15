@@ -1,11 +1,11 @@
-<mat-card>
+<mat-card (click)="onDelete()">
   <mat-card-content>
-    <span>{{ item().description }}</span>
-    <span>{{ item().completionDate | date:'dd.MM.yyyy' }}</span>
+    <div class="row">
+      <span class="label">{{ constants.completionDateLabel }}</span>
+      <span class="value">{{ item().completionDate | date:'dd.MM.yyyy' }}</span>
+    </div>
+    <div class="row">
+      <span class="value">{{ item().description }}</span>
+    </div>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-icon-button (click)="onDelete()">
-      <mat-icon>delete</mat-icon>
-    </button>
-  </mat-card-actions>
 </mat-card>

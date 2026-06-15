@@ -1,0 +1,43 @@
+mat-card {
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #fce4e4;
+  }
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  &:first-child {
+    border-bottom: 1px solid var(--mat-sys-outline-variant);
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--mat-sys-outline);
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  margin-right: 0.5rem;
+  white-space: nowrap;
+}
+
+.value {
+  font-size: 0.95rem;
+  word-break: break-word;
+  line-height: 1.5;
+
+  @media (max-width: 480px) {
+    font-size: 0.875rem;
+  }
+}
