@@ -9,7 +9,7 @@ describe('TodoItem', () => {
 
   const mockItem: TodoItem = {
     id: '1',
-    description: 'Öl wechsel',
+    description: 'Ölwechsel',
     completionDate: new Date(2026, 5, 20)
   };
 
@@ -29,7 +29,7 @@ describe('TodoItem', () => {
   });
 
   it('should display description', () => {
-    expect(fixture.nativeElement.textContent).toContain('Öl wechsel');
+    expect(fixture.nativeElement.textContent).toContain('Ölwechsel');
   });
 
   it('should display completionDate formatted as DD.MM.YYYY', () => {
