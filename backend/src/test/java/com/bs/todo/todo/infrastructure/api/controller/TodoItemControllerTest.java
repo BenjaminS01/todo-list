@@ -24,13 +24,13 @@ class TodoItemControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("""
                         {
-                            "description": "Öl wechsel",
+                            "description": "Ölwechsel",
                             "completionDate": "20.06.2026"
                         }
                         """))
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.id").exists())
-                .andExpect(jsonPath("$.description").value("Öl wechsel"))
+                .andExpect(jsonPath("$.description").value("Ölwechsel"))
                 .andExpect(jsonPath("$.completionDate").value("20.06.2026"));
     }
 
@@ -53,7 +53,7 @@ class TodoItemControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("""
                         {
-                            "description": "Öl wechsel",
+                            "description": "Ölwechsel",
                             "completionDate": "2026-06-20"
                         }
                         """))
@@ -66,7 +66,7 @@ class TodoItemControllerTest {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("""
                         {
-                            "description": "Öl wechsel",
+                            "description": "Ölwechsel",
                             "completionDate": "20.06.2026"
                         }
                         """));
@@ -82,7 +82,7 @@ class TodoItemControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
                         .content("""
                         {
-                            "description": "Öl wechsel",
+                            "description": "Ölwechsel",
                             "completionDate": "20.06.2026"
                         }
                         """))

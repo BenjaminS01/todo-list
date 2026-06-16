@@ -18,7 +18,7 @@ public class TodoApplication {
 	@Bean
     ApplicationRunner dataInitializer(TodoItemService service) {
 		return args -> {
-			service.create("Öl wechsel", LocalDate.of(2026, 6, 20));
+			service.create("Ölwechsel", LocalDate.of(2026, 6, 20));
 			service.create("Rasen mähen", LocalDate.of(2026, 6, 25));
 			service.create("LLorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod " +
 							"tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam " +

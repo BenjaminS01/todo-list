@@ -4,7 +4,7 @@ Feature: TODO Management
     When I send a POST request with body:
       """json
       {
-        "description": "Öl wechsel",
+        "description": "Ölwechsel",
         "completionDate": "20.06.2026"
       }
       """
